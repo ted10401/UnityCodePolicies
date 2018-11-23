@@ -2,15 +2,19 @@
 ## Intro
 The guide is based on my experiences , recommendations from developers and colleges. When doing code reviews always check for these things and if there is an issue then let them know and reference this guide. If you have suggestions or questions then feel free to leave messages.
 
+
 ## Reflection
 Reflection is slow and breaks the obfuscator. You can use it in Unity Editor or Debugging but don’t use it in Runtime!
 It also doesn’t work on mobile if the “Script Call Optimization” is set to “Fast but no Exception”.
 
+
 ## Public Members
 Use as few public members as possible. It’s much easier to refractor one method than to refractor every place that uses that member.
 
+
 ## Globals
 Use as few globals as possible. Instead of globals create singletons that hold the data. Singletons are special classes that should be checked to make sure that multiple instances are not created.
+
 
 ## Script Policy
 ### Class Members
@@ -23,6 +27,7 @@ public float exampleFloat;
 public bool exampleBool;
 ```
 
+
 ### private Members
 Named the private members with prefix "m_".
 #### Examples
@@ -32,6 +37,7 @@ private float m_exampleFloat;
 private bool m_exampleBool;
 ```
 
+
 ### const and readonly
 The const and readonly members are spelled with a CAPITAL letter and split the letter with "_";
 
@@ -40,6 +46,7 @@ The const and readonly members are spelled with a CAPITAL letter and split the l
 private const int CONST_INT = 1;
 public const string DOCUMENT_NAME = "UnityScriptPolicies";
 ```
+
 
 ### Methods
 Named methods with the upper camel case.
@@ -51,6 +58,7 @@ public void FirstMethod()
     
 }  
 ```
+
 
 ### Braces
 Always seperated the open brace or close brace in a new line.
@@ -87,6 +95,7 @@ public class BraceExample : MonoBehaviour
 }    
 ```
 
+
 ### interface
 Named the interface class with prefix "I".
 
@@ -103,6 +112,7 @@ public interface IFixedUpdate
 }
 ```
 
+
 ### Action, Delegate, Event, and Func
 Named Action, delegate, event, and Func with prefix "On" in methods and "on" in members.
 
@@ -111,6 +121,7 @@ Named Action, delegate, event, and Func with prefix "On" in methods and "on" in 
 public delegate void OnPlayerHealthPointUpdate(float hp);
 public Action onAction;
 ```
+
 
 ### Null Check
 Always do the null check.
@@ -129,6 +140,7 @@ private void Update()
     //TODO: Update the target  
 }  
 ```
+
 
 ### UI (UGUI)
 Named GameObjects and class members with the component's name as the suffix.
