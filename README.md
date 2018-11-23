@@ -3,29 +3,32 @@
 The guide is based on my experiences , recommendations from developers and colleges. When doing code reviews always check for these things and if there is an issue then let them know and reference this guide. If you have suggestions or questions then feel free to leave messages.
 
 
-## Class Members
-Use the lower camel case for all public, private, and other members.
+## Members
+Use upper camel case for public members, and lower camel case for others.
+Named protected, internal, and private members with prefix "m_".
 
 #### Examples
 ```
-public int exampleInt;
-public float exampleFloat;
-public bool exampleBool;
-```
+public int PublicInt;
+public float PublicFloat;
+public bool PublicBool;
 
+internal int m_internalInt;
+internal float m_internalFloat;
+internal bool m_internalBool;
 
-## private Members
-Named the private members with prefix "m_".
-#### Examples
-```
-private int m_exampleInt;
-private float m_exampleFloat;
-private bool m_exampleBool;
+protected int m_protectedInt;
+protected float m_protectedFloat;
+protected bool m_protectedBool;
+
+private int m_privateInt;
+private float m_privateFloat;
+private bool m_privateBool;
 ```
 
 
 ## const and readonly
-The const and readonly members are spelled with a CAPITAL letter and split the letter with "_";
+Named const and readonly members in CAPITAL letter and split the letter with "_";
 
 #### Examples
 ```
@@ -132,7 +135,6 @@ private void Update()
 Use the component's name as the suffix.
 
 #### Examples
-```
 | Component  | Policy              | Hierarchy Example  | Public Member Example | Private Member Example |
 |------------|---------------------|--------------------|-----------------------|------------------------|
 | Text       | [Feature]Text       | TitleText          | TitleText             | m_titleText            |
@@ -145,4 +147,3 @@ Use the component's name as the suffix.
 | Dropdown   | [Feature]Dropdown   | WeaponDropdown     | WeaponDropdown        | m_weaponDropdown       |
 | InputField | [Feature]InputField | PasswordInputField | PasswordInputField    | m_passwordInputField   |
 | Canvas     | [Feature]Canvas     | MainCanvas         | MainCanvas            | m_mainCanvas           |
-```
