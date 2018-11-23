@@ -129,20 +129,20 @@ private void Update()
 
 
 ## UI (UGUI)
-Named GameObjects and class members with the component's name as the suffix.
+Use the component's name as the suffix.
 
 #### Examples
 ```
-| Component  | Policy              | Example            |
-|------------|---------------------|--------------------|
-| Text       | [Feature]Text       | TitleText          |
-| Image      | [Feature]Image      | CloseImage         |
-| RawImage   | [Feature]RawImage   | BackgroundRawImage |
-| Button     | [Feature]Button     | PlayButton         |
-| Toggle     | [Feature]Toggle     | BGMToggle          |
-| Slider     | [Feature]Slider     | HPSlider           |
-| Scrollbar  | [Feature]Scrollbar  | ItemScrollbar      |
-| Dropdown   | [Feature]Dropdown   | WeaponDropdown     |
-| InputField | [Feature]InputField | PasswordInputField |
-| Canvas     | [Feature]Canvas     | MainCanvas         |
+| Component  | Policy              | Hierarchy Example  | Public Member Example | Private Member Example |
+|------------|---------------------|--------------------|-----------------------|------------------------|
+| Text       | [Feature]Text       | TitleText          | TitleText             | m_titleText            |
+| Image      | [Feature]Image      | CloseImage         | CloseImage            | m_closeImage           |
+| RawImage   | [Feature]RawImage   | BackgroundRawImage | BackgroundRawImage    | m_backgroundRawImage   |
+| Button     | [Feature]Button     | PlayButton         | PlayButton            | m_playButton           |
+| Toggle     | [Feature]Toggle     | BGMToggle          | BGMToggle             | m_bgmToggle            |
+| Slider     | [Feature]Slider     | HPSlider           | HPSlider              | m_hpSlider             |
+| Scrollbar  | [Feature]Scrollbar  | ItemScrollbar      | ItemScrollbar         | m_itemScrollbar        |
+| Dropdown   | [Feature]Dropdown   | WeaponDropdown     | WeaponDropdown        | m_weaponDropdown       |
+| InputField | [Feature]InputField | PasswordInputField | PasswordInputField    | m_passwordInputField   |
+| Canvas     | [Feature]Canvas     | MainCanvas         | MainCanvas            | m_mainCanvas           |
 ```
