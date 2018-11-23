@@ -3,21 +3,7 @@
 The guide is based on my experiences , recommendations from developers and colleges. When doing code reviews always check for these things and if there is an issue then let them know and reference this guide. If you have suggestions or questions then feel free to leave messages.
 
 
-## Reflection
-Reflection is slow and breaks the obfuscator. You can use it in Unity Editor or Debugging but don’t use it in Runtime!
-It also doesn’t work on mobile if the “Script Call Optimization” is set to “Fast but no Exception”.
-
-
-## Public Members
-Use as few public members as possible. It’s much easier to refractor one method than to refractor every place that uses that member.
-
-
-## Globals
-Use as few globals as possible. Instead of globals create singletons that hold the data. Singletons are special classes that should be checked to make sure that multiple instances are not created.
-
-
-## Script Policy
-### Class Members
+## Class Members
 Use the lower camel case for all public, private, and other members.
 
 #### Examples
@@ -28,7 +14,7 @@ public bool exampleBool;
 ```
 
 
-### private Members
+## private Members
 Named the private members with prefix "m_".
 #### Examples
 ```
@@ -38,7 +24,7 @@ private bool m_exampleBool;
 ```
 
 
-### const and readonly
+## const and readonly
 The const and readonly members are spelled with a CAPITAL letter and split the letter with "_";
 
 #### Examples
@@ -48,7 +34,7 @@ public const string DOCUMENT_NAME = "UnityScriptPolicies";
 ```
 
 
-### Methods
+## Methods
 Named methods with the upper camel case.
 
 #### Examples
@@ -60,7 +46,7 @@ public void FirstMethod()
 ```
 
 
-### Braces
+## Braces
 Always seperated the open brace or close brace in a new line.
 If you are using if/for or other things where braces are optional for the body always add the braces for it.
 
@@ -96,7 +82,7 @@ public class BraceExample : MonoBehaviour
 ```
 
 
-### interface
+## interface
 Named the interface class with prefix "I".
 
 #### Examples
@@ -113,7 +99,7 @@ public interface IFixedUpdate
 ```
 
 
-### Action, Delegate, Event, and Func
+## Action, Delegate, Event, and Func
 Named Action, delegate, event, and Func with prefix "On" in methods and "on" in members.
 
 #### Examples
@@ -123,7 +109,7 @@ public Action onAction;
 ```
 
 
-### Null Check
+## Null Check
 Always do the null check.
 
 #### Examples
@@ -142,7 +128,7 @@ private void Update()
 ```
 
 
-### UI (UGUI)
+## UI (UGUI)
 Named GameObjects and class members with the component's name as the suffix.
 
 #### Examples
