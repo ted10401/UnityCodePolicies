@@ -1,4 +1,4 @@
-# UnityScriptPolicies
+# UnityCodePolicies
 ## Intro
 The guide is based on my experiences , recommendations from developers and colleges. When doing code reviews always check for these things and if there is an issue then let them know and reference this guide. If you have suggestions or questions then feel free to leave messages.
 
